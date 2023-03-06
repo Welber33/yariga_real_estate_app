@@ -7,7 +7,7 @@ export default function PropertyCard({ id, title, location, price, photo }: Prop
   return (
     <Card
       component={Link}
-      to={`/properties/${id}`}
+      to={`/properties/show/${id}`}
       sx={{
         maxWidth: "330px",
         padding: "10px",
@@ -15,7 +15,6 @@ export default function PropertyCard({ id, title, location, price, photo }: Prop
           boxShadow: "0 22px 45px 2px rgba(176, 176, 176, 0.1)"
         },
         cursor: "pointer",
-        textDecoration: "none"
       }}
       elevation={0}
     >

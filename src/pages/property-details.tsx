@@ -248,8 +248,10 @@ export default function PropertyDetails() {
                 fontWeight={600}
                 color="#11142D"
               >
-                {propertyDetails.creator.allProperties.length}{" "}
-                Properties
+                {propertyDetails.creator.allProperties.length > 1 ?
+                  <>{propertyDetails.creator.allProperties.length} {"  "} Properties Listed</> :
+                  <>{propertyDetails.creator.allProperties.length} {"  "} Property Listed</>
+                }
               </Typography>
             </Stack>
 
@@ -262,7 +264,7 @@ export default function PropertyDetails() {
             >
               <CustomButton
                 title={!isCurrentUser ? "Message" : "Edit"}
-                backgroundColor="#475BE8"
+                backgroundColor="#8257e5"
                 color="#FCFCFC"
                 fullWidth
                 icon={
@@ -294,6 +296,7 @@ export default function PropertyDetails() {
           <Stack>
             <img
               src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
+              alt=""
               width="100%"
               height={306}
               style={{ borderRadius: 10, objectFit: "cover" }}
@@ -303,7 +306,7 @@ export default function PropertyDetails() {
           <Box>
             <CustomButton
               title="Book Now"
-              backgroundColor="#475BE8"
+              backgroundColor="#8257e5"
               color="#FCFCFC"
               fullWidth
             />

@@ -1,6 +1,6 @@
 import { BaseKey } from '@pankod/refine-core';
 
-export interface AgentCardProp {
+export interface AgentCardProps {
     id?: BaseKey | undefined,
     name: string,
     email: string,
